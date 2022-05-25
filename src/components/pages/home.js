@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 //Home page component
 
 const Home = () => {
+  const isLoggedIn = useSelector((state) => state.isLoggedIn);
   return (
     <div class="container" style={{ marginTop: "20vh" }}>
       <div class="row">
@@ -59,7 +60,11 @@ const Home = () => {
             to launch
           </h1>
           <Button variant="outlined" size="large" style={{ marginTop: "2vh" }}>
-            <Link to="/blog">Lets Manage a Blog </Link>
+            {!isLoggedIn ? (
+              <Link to="/login">Lets Manage a Blog </Link>
+            ) : (
+              <Link to="/blog">Lets Manage a Blog </Link>
+            )}
           </Button>
         </div>
         <div class="col">
