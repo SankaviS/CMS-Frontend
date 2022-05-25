@@ -28,7 +28,7 @@ const AddBlogs = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .post("https://mycmsblogg.herokuapp.com/blog/add", {
+      .post("https://webkit-cms.herokuapp.com/blog/add", {
         title: input.title,
         description: input.description,
         image: input.image,

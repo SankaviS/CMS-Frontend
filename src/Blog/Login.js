@@ -30,7 +30,7 @@ const Login = () => {
 
   const sendRequest = async (type = "login") => {
     const res = await axios
-      .post(`https://mycmsblogg.herokuapp.com/user/${type}`, {
+      .post(`https://webkit-cms.herokuapp.com/user/${type}`, {
         name: input.name,
         email: input.email,
         password: input.password,

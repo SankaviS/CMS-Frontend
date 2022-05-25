@@ -26,7 +26,7 @@ const BlogDetails = () => {
 
   const fetchDetails = async () => {
     const res = await axios
-      .get(`https://mycmsblogg.herokuapp.com/blog/${id}`)
+      .get(`https://webkit-cms.herokuapp.com/blog/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -48,7 +48,7 @@ const BlogDetails = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .put(`https://mycmsblogg.herokuapp.com/blog/update/${id}`, {
+      .put(`https://webkit-cms.herokuapp.com/blog/update/${id}`, {
         title: input.title,
         description: input.description,
       })
@@ -58,7 +58,7 @@ const BlogDetails = () => {
   };
 
   //Form submit function
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     sendRequest()

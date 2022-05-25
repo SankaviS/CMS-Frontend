@@ -24,7 +24,7 @@ const BlogCard = ({ title, description, imageURL, username, isUser, id }) => {
 
   const deleteRequest = async () => {
     const res = await axios
-      .delete(`https://mycmsblogg.herokuapp.com/blog/${id}`)
+      .delete(`https://webkit-cms.herokuapp.com/blog/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;

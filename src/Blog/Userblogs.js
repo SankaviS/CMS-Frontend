@@ -12,7 +12,7 @@ const Userblogs = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get(`https://mycmsblogg.herokuapp.com/blog/user/${id}`)
+      .get(`https://webkit-cms.herokuapp.com/blog/user/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     console.log(data);
